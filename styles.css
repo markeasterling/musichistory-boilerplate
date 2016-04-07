@@ -7,9 +7,14 @@ body	{
 	background-color: #FFB4B0;
 	border: 2px solid black;
 }
-
 		.top-nav li  {
 			list-style-type: none;
+			display: inline;
+		}
+
+		.top-nav li + li:before	{
+			content: "| ";
+			padding: .25em;
 		}
 
 .criteria	{
@@ -21,8 +26,14 @@ body	{
 	background-color: #FEFAC0;
 	border: 2px solid black;
 }
-
 		.song-display li  {
 			list-style-type: none;
+			display: inline;
 		}
+
+		.song-display li + li:before {
+    content: "| ";
+    padding: .5em;
+  }
+
 
