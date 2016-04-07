@@ -8,3 +8,21 @@ body	{
 	border: 2px solid black;
 }
 
+		.top-nav li  {
+			list-style-type: none;
+		}
+
+.criteria	{
+	background-color: #4DD7FA;
+	border: 2px solid black;
+}
+
+.song-display	{
+	background-color: #FEFAC0;
+	border: 2px solid black;
+}
+
+		.song-display li  {
+			list-style-type: none;
+		}
+
