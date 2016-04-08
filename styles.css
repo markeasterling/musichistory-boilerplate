@@ -20,11 +20,40 @@ body	{
 .criteria	{
 	background-color: #4DD7FA;
 	border: 2px solid black;
+	float:left;
+	margin-right: 15px;
+	margin-top: 15px;
+	width:30%;
+
+}
+
+.selectors	{
+	display: block;
+}
+
+.filter-button	{
+text-align: center;
+}
+
+.genre-check1,
+.genre-check2,
+.genre-check3,
+.genre-check4,
+.genre-check5,
+.genre-check6	{
+	text-align: center;
+	display: inline-flex;
 }
 
 .song-display	{
 	background-color: #FEFAC0;
 	border: 2px solid black;
+	width: 100%;
+	display:inline;
+	margin-top: 15px;
+
+
+
 }
 		.song-display li  {
 			list-style-type: none;
@@ -36,4 +65,8 @@ body	{
     padding: .5em;
   }
 
+.container	{
+	display: flex;
+	width: 100%;
+}
 
