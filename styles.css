@@ -23,6 +23,7 @@ body	{
 			padding: .25em;
 		}
 
+/*Selection critera, excluding checklist*/
 .criteria	{
 	background-color: #4DD7FA;
 	border: 2px solid black;
@@ -48,27 +49,38 @@ body	{
 	border: 1px solid black;
 }
 
-.filter-button	{
-text-align: center;
+
+
+/*columns for checklist*/
+.col1	{
+	display: inline-block;
+	float: left;
+	margin: .125em;
+
+
 }
 
-/*individual genre checklist buttons*/
-.genre-check1,
-.genre-check2,
-.genre-check3,
-.genre-check4,
-.genre-check5,
-.genre-check6	{
-	text-align: center;
-	display: inline-flex;
-	margin: auto;
+.col2	{
+	display: inline-block;
+	float: left;
+	margin: .125em;
+}
 
+
+
+}
+
+.filter-button	{
+text-align: center;
 
 }
 
 .filter  {
 	text-align: center;
-	margin: 1em;
+
+	clear: left;
+	display: block;
+	padding: 1em;
 }
 .song-display	{
 	background-color: #FEFAC0;
