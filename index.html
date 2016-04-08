@@ -19,12 +19,12 @@
 	</nav>
 <div class="container">
 	<div class="criteria">
-		<label>Song length:
-			<input type="range"></input>
-		</label>
+		<label class="criterion">Song length:</label>
+			<input type="range" class="range criterion"></input>
 
-		<label class="selectors">Artist:</label>
-			<select name="artist">
+
+		<label class="selectors criterion">Artist:</label>
+			<select name="artist" class="select-box criterion">
 				<option value="artist1">artist1</option>
 				<option value="artist2">artist2</option>
 				<option value="artist3">artist3</option>
@@ -34,8 +34,8 @@
 			</select>
 
 
-		<label class="selectors">Album:</label>
-			<select name="album">
+		<label class="selectors criterion">Album:</label>
+			<select name="album" class="select-box criterion">
 				<option value="album1">album1</option>
 				<option value="album2">album2</option>
 				<option value="album3">album3</option>
@@ -44,7 +44,7 @@
 			</select>
 
 
-		<label class="selectors"> Genre:</label>
+		<label class="selectors criterion"> Genre:</label>
 
 				<div class="genre-check1">
 					<input type="checkbox" value="genre1">Genre1</input>
@@ -65,7 +65,9 @@
 					<input type="checkbox" value="genre6">Genre6</input>
 				</div>
 
-		<button class="filter-button">Filter</button>
+		<div class="filter">
+			<button class="filter-button">Filter</button>
+		</div>
 
 	</div>
 

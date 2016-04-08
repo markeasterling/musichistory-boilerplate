@@ -3,6 +3,11 @@ body	{
 	padding: 0;
 }
 
+.container	{
+	display: flex;
+	width: 100%;
+}
+
 .top-nav	{
 	background-color: #FFB4B0;
 	border: 2px solid black;
@@ -24,17 +29,29 @@ body	{
 	margin-right: 15px;
 	margin-top: 15px;
 	width:30%;
+}
 
+.criterion	{
+	margin: .5em;
 }
 
 .selectors	{
 	display: block;
 }
 
+.range{
+	border: 5px solid black;
+}
+
+.select-box	{
+	border: 1px solid black;
+}
+
 .filter-button	{
 text-align: center;
 }
 
+/*individual genre checklist buttons*/
 .genre-check1,
 .genre-check2,
 .genre-check3,
@@ -43,8 +60,15 @@ text-align: center;
 .genre-check6	{
 	text-align: center;
 	display: inline-flex;
+	margin:.5em;
+
+
 }
 
+.filter  {
+	text-align: center;
+	margin: 1em;
+}
 .song-display	{
 	background-color: #FEFAC0;
 	border: 2px solid black;
@@ -65,8 +89,5 @@ text-align: center;
     padding: .5em;
   }
 
-.container	{
-	display: flex;
-	width: 100%;
-}
+
 
