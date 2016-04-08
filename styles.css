@@ -1,6 +1,7 @@
 body	{
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
+	width: 80%
 }
 
 .container	{
@@ -60,7 +61,7 @@ text-align: center;
 .genre-check6	{
 	text-align: center;
 	display: inline-flex;
-	margin:.5em;
+	margin: auto;
 
 
 }
@@ -89,5 +90,7 @@ text-align: center;
     padding: .5em;
   }
 
-
+.song-name	{
+	margin-left: 2em;
+}
 
