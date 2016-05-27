@@ -6,15 +6,8 @@ const addAlbumName = $(".album__name");
 const addGenreName = $(".genre__name");
 const addMusicButton = $(".addMusicButton");
 const songContainer = $(".song-container");
-let songsArray =[];
-let moreSongsArray
-
-songs = [];
-	songs[songs.length] = "Legs > by ZZTop on the album Eliminator";
-	songs[songs.length] = "The Logical Song > by Supertramp on the album Breakfast in America";
-	songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album The Wall";
-	songs[songs.length] = "Welcome to the Jungle > by Guns & Roses on the album Appetite for Destruction";
-	songs[songs.length] = "Ironic > by Alanis Morisette on the album Jagged Little Pill";
+let songsArray = [];
+let allSongsArray =[];
 
 
 $('.addMusicLink').click(() => {
@@ -27,52 +20,44 @@ $('.viewMusicLink').click(() => {
 	addMusic.hide();
 });
 
-
 addMusicButton.click(() => {
-	// let newSong = `${addSongName.val()} - by ${addArtistName.val()} on the album ${addAlbumName.val()}`;
-	// addSongName.val("");
-	// addArtistName.val("");
-	// addAlbumName.val("");
-	// songs.push(newSong);
-	// toDOM(newSong);
-	let songObject = {
-									"title": `${addSongName.val()}`,
-									"artist": `${addArtistName.val()}`,
-									"album": `${addAlbumName.val()}`,
-									"genre": `${addGenreName.val()}`
-							 }
+	songObject =
+		{
+		"title": `${addSongName.val()}`,
+		"artist": `${addArtistName.val()}`,
+		"album": `${addAlbumName.val()}`,
+		"genre": `${addGenreName.val()}`
+		}
 	songsArray.push(songObject);
-	console.log(songObject);
-	console.log(songsArray);
+	console.log("songsArray",songsArray);
+	toDOM(songObject)
 });
 
-function toDOM (song) {
-	let songToAdd = `<div>${song}</div>`;
+function toDOM (songObject) {
+	let songToAdd = `<p>${songObject.title} by ${songObject.artist} on the album: ${songObject.album}. Genre: ${songObject.genre} <button class="deleteThisSong">delete</button></p>`
 	songContainer.append(songToAdd);
 };
 
 $.ajax({
 	url:"songs.json"
-}).done((songs) => {
-	let songsArray = songs.songs
-	songsArray.forEach((item) => {
-	displaySonginDOM = `<p>${item.title} by ${item.artist} on the album: ${item.album}. Genre: ${item.genre} <button class="deleteThisSong">delete</button></p>`
-	songContainer.append(displaySonginDOM)
+	}).done((songs) => {
+		songsArray = songs.songs
+		songsArray.forEach((item) => {
+		displaySonginDOM = `<p>${item.title} by ${item.artist} on the album: ${item.album}. Genre: ${item.genre} <button class="deleteThisSong">delete</button></p>`
+		songContainer.append(displaySonginDOM)
 	})
 })
-
-
 
 $('.more__songs').click(() => {
 	$.ajax({
 	url:"moresongs.json"
-}).done((moresongs) => {
-	let moreSongsArray = moresongs.songs
-	moreSongsArray.forEach((item)=> {
-	displaySonginDOM = `<p>${item.title} by ${item.artist} on the album: ${item.album}. Genre: ${item.genre} <button class="deleteThisSong">delete</button></p>`
-	songContainer.append(displaySonginDOM)
+	}).done((moresongs) => {
+		let moreSongsArray = moresongs.songs
+		moreSongsArray.forEach((item)=> {
+		displaySonginDOM = `<p>${item.title} by ${item.artist} on the album: ${item.album}. Genre: ${item.genre} <button class="deleteThisSong">delete</button></p>`
+		songContainer.append(displaySonginDOM)
+		})
 	})
-})
 })
 
 songContainer.on('click', '.deleteThisSong', (e) => {
