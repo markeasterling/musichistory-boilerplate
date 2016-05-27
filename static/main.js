@@ -46,7 +46,7 @@ $.ajax({
 }).done((songs) => {
 	let songsArray = songs.songs
 	songsArray.forEach((item) => {
-	displaySonginDOM = `<p>${item.title} by ${item.artist} on the album: ${item.album}. Genre: ${item.genre}</p>`
+	displaySonginDOM = `<p>${item.title} by ${item.artist} on the album: ${item.album}. Genre: ${item.genre} <button class="deleteThisSong">delete</button></p>`
 	songContainer.append(displaySonginDOM)
 	})
 })
@@ -58,7 +58,8 @@ $.ajax({
 }).done((moresongs) => {
 	let moreSongsArray = moresongs.songs
 	moreSongsArray.forEach((item)=> {
-	console.log(item.artist)
+	displaySonginDOM = `<p>${item.title} by ${item.artist} on the album: ${item.album}. Genre: ${item.genre} <button class="deleteThisSong">delete</button></p>`
+	songContainer.append(displaySonginDOM)
 	})
 })
 
