@@ -1,0 +1,122 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Music History</title>
+  <link rel="stylesheet" href="/styles.css">
+
+  </style>
+</head>
+
+<body>
+
+		<nav class="top-nav">
+			<ul>
+				<li class="viewMusicLink"><a href="#">View Music</a></li>
+				<li class="addMusicLink"><a href="#">Add Music</a></li>
+				<li><a href="#">Profile</a></li>
+			</ul>
+		</nav>
+		<div class="view__music">
+			<div class="criteria">
+				<label class="criterion">Song length:</label>
+					<input type="range" class="range criterion"></input>
+
+
+				<label class="selectors criterion">Artist:</label>
+					<select name="artist" class="select-box criterion">
+						<option value="artist1">artist1</option>
+						<option value="artist2">artist2</option>
+						<option value="artist3">artist3</option>
+						<option value="artist4">artist4</option>
+						<option value="artist5">artist5</option>
+
+					</select>
+
+
+				<label class="selectors criterion">Album:</label>
+					<select name="album" class="select-box criterion">
+						<option value="album1">album1</option>
+						<option value="album2">album2</option>
+						<option value="album3">album3</option>
+						<option value="album4">album4</option>
+						<option value="album5">album5</option>
+					</select>
+
+
+				<label class="selectors criterion"> Genre:</label>
+
+					<div class= "col1">
+						<div class="check1">
+							<input type="checkbox" value="genre1">rock</input>
+						</div>
+						<div class="check2">
+							<input type="checkbox" value="genre2">jazz</input>
+						</div>
+						<div class="check3">
+							<input type="checkbox" value="genre3">electronic</input>
+						</div>
+					</div>
+					<div class="col2">
+						<div class="check4">
+							<input type="checkbox" value="genre4">funk</input>
+						</div>
+						<div class="check5">
+							<input type="checkbox" value="genre5">instru.</input>
+						</div>
+						<div class="check6">
+							<input type="checkbox" value="genre6">world</input>
+						</div>
+					</div>
+
+				<div class="filter">
+					<button class="filter-button">Filter</button>
+				</div>
+
+			</div>
+
+			<div class="song-display">
+				<h3 class="song-name">Song Name</h3>
+					<ul class="song-criteria">
+						<li>Artist Name</li>
+						<li>Album Name</li>
+						<li>Genre</li>
+					</ul>
+				<h3 class="song-name">Song Name</h3>
+					<ul class="song-criteria">
+						<li>Artist Name</li>
+						<li>Album Name</li>
+						<li>Genre</li>
+					</ul>
+				<h3 class="song-name">Song Name</h3>
+					<ul class="song-criteria">
+						<li>Artist Name</li>
+						<li>Album Name</li>
+						<li>Genre</li>
+					</ul>
+				<h3 class="song-name">Song Name</h3>
+					<ul class="song-criteria">
+						<li>Artist Name</li>
+						<li>Album Name</li>
+						<li>Genre</li>
+					</ul>
+			</div>
+
+		</div>
+
+	<div class="add__music">
+		<h1>Add Music</h1>
+		<input class="song__name" type="text" placeholder="song name">
+		<input class="artist__name" type="text" placeholder="artist name">
+		<input class ="album__name" type="text" placeholder="album name">
+		<button class="addMusicButton">Add Song</button>
+	</div>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="songs.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
+
+
+
