@@ -53,7 +53,8 @@ $.ajax({
 
 
 
-$.ajax({
+$('.more__songs').click(() => {
+	$.ajax({
 	url:"moresongs.json"
 }).done((moresongs) => {
 	let moreSongsArray = moresongs.songs
@@ -62,6 +63,8 @@ $.ajax({
 	songContainer.append(displaySonginDOM)
 	})
 })
+})
+
 
 
 
