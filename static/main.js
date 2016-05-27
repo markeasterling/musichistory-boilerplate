@@ -3,9 +3,10 @@ const addMusic = $(".add__music");
 const addSongName = $(".song__name");
 const addArtistName = $(".artist__name");
 const addAlbumName = $(".album__name");
+const addGenreName = $(".genre__name");
 const addMusicButton = $(".addMusicButton");
 const songContainer = $(".song-container");
-let songsArray
+let songsArray =[];
 let moreSongsArray
 
 songs = [];
@@ -28,12 +29,21 @@ $('.viewMusicLink').click(() => {
 
 
 addMusicButton.click(() => {
-	let newSong = `${addSongName.val()} - by ${addArtistName.val()} on the album ${addAlbumName.val()}`;
-	addSongName.val("");
-	addArtistName.val("");
-	addAlbumName.val("");
-	songs.push(newSong);
-	toDOM(newSong);
+	// let newSong = `${addSongName.val()} - by ${addArtistName.val()} on the album ${addAlbumName.val()}`;
+	// addSongName.val("");
+	// addArtistName.val("");
+	// addAlbumName.val("");
+	// songs.push(newSong);
+	// toDOM(newSong);
+	let songObject = {
+									"title": `${addSongName.val()}`,
+									"artist": `${addArtistName.val()}`,
+									"album": `${addAlbumName.val()}`,
+									"genre": `${addGenreName.val()}`
+							 }
+	songsArray.push(songObject);
+	console.log(songObject);
+	console.log(songsArray);
 });
 
 function toDOM (song) {
