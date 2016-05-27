@@ -4,7 +4,7 @@ const addSongName = $(".song__name");
 const addArtistName = $(".artist__name");
 const addAlbumName = $(".album__name");
 const addMusicButton = $(".addMusicButton");
-const songDisplay = $(".song-display");
+const songContainer = $(".song-container");
 let songsArray
 let moreSongsArray
 
@@ -38,7 +38,7 @@ addMusicButton.click(() => {
 
 function toDOM (song) {
 	let songToAdd = `<div>${song}</div>`;
-	$(".song-display").append(songToAdd);
+	songContainer.append(songToAdd);
 };
 
 $.ajax({
@@ -47,7 +47,7 @@ $.ajax({
 	let songsArray = songs.songs
 	songsArray.forEach((item) => {
 	displaySonginDOM = `<p>${item.title} by ${item.artist} on the album: ${item.album}. Genre: ${item.genre}</p>`
-	songDisplay.append(displaySonginDOM)
+	songContainer.append(displaySonginDOM)
 	})
 })
 
