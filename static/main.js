@@ -65,6 +65,11 @@ $('.more__songs').click(() => {
 })
 })
 
+songContainer.on('click', '.deleteThisSong', (e) => {
+	const row = $(e.target).closest('p')
+	row.remove();
+})
+
 
 
 
