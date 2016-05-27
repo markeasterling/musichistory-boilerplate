@@ -4,6 +4,9 @@ const addSongName = $(".song__name");
 const addArtistName = $(".artist__name");
 const addAlbumName = $(".album__name");
 const addMusicButton = $(".addMusicButton");
+const songDisplay = $(".song-display");
+let songsArray
+let moreSongsArray
 
 songs = [];
 	songs[songs.length] = "Legs > by ZZTop on the album Eliminator";
@@ -37,3 +40,27 @@ function toDOM (song) {
 	let songToAdd = `<div>${song}</div>`;
 	$(".song-display").append(songToAdd);
 };
+
+$.ajax({
+	url:"songs.json"
+}).done((songs) => {
+	let songsArray = songs.songs
+	songsArray.forEach((item) => {
+	displaySonginDOM = `<p>${item.title} by ${item.artist} on the album: ${item.album}. Genre: ${item.genre}</p>`
+	songDisplay.append(displaySonginDOM)
+	})
+})
+
+
+
+$.ajax({
+	url:"moresongs.json"
+}).done((moresongs) => {
+	let moreSongsArray = moresongs.songs
+	moreSongsArray.forEach((item)=> {
+	console.log(item.artist)
+	})
+})
+
+
+

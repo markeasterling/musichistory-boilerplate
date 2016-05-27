@@ -1,0 +1,34 @@
+{
+	"songs": [
+	 {
+			"title": "title six",
+			"artist": "artist six",
+			"album": "album six",
+			"genre": "rock"
+		},
+ 		{
+			"title": "title ten",
+			"artist": "artist ten",
+			"album": "album ten",
+			"genre": "funk"
+		},
+		{
+			"title": "title seven",
+			"artist": "artist seven",
+			"album": "album seven",
+			"genre": "electronic"
+		},
+		{
+			"title": "title eight",
+			"artist": "artist eight",
+			"album": "album eight",
+			"genre": "world"
+		},
+		{
+			"title": "title nine",
+			"artist": "artist nine",
+			"album": "album nine",
+			"genre": "jazz"
+		}
+	]
+}

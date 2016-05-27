@@ -1,0 +1,34 @@
+{
+	"songs": [
+		{
+			"title": "title one",
+			"artist": "artist one",
+			"album": "album one",
+			"genre": "jazz"
+		},
+		{
+			"title": "title two",
+			"artist": "artist two",
+			"album": "album two",
+			"genre": "rock"
+		},
+		{
+			"title": "title three",
+			"artist": "artist three",
+			"album": "album three",
+			"genre": "funk"
+		},
+		{
+			"title": "title four",
+			"artist": "artist four",
+			"album": "album four",
+			"genre": "electronic"
+		},
+		{
+			"title": "title five",
+			"artist": "artist five",
+			"album": "album five",
+			"genre": "world"
+		}
+	]
+}
